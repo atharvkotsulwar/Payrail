@@ -90,6 +90,15 @@ npm install
 npm run dev
 ```
 
+## 📸 Screenshots
+
+![Login](screenshots/01-login.png)
+![Dashboard](screenshots/02-dashboard.png)
+![New Payment](screenshots/03-new-payment.png)
+![Payment History](screenshots/04-payment-history.png)
+![Ledger](screenshots/05-ledger.png)
+
+
 ---
 
 ## 🧠 Resume One-Liner
