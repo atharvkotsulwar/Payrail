@@ -92,14 +92,31 @@ npm run dev
 
 ## 📸 Screenshots
 
+### 🔐 Login
 ![Login](screenshots/01-login.png)
-![Dashboard](screenshots/02-dashboard.png)
-![New Payment](screenshots/03-new-payment.png)
-![Payment History](screenshots/04-payment-history.png)
-![Ledger](screenshots/05-ledger.png)
-![swagger](screenshots/06-swagger.png)
-![stripe webhooks](screenshots/07-stripe-webhooks.png)
 
+### 📊 Dashboard
+![Dashboard](screenshots/02-dashboard.png)
+
+### 💳 New Payment
+Initiate a new card payment with amount and currency selection.
+![New Payment](screenshots/03-new-payment.png)
+
+### 📜 Payment History
+View all past payments with latest transactions on top.
+![Payment History](screenshots/04-payment-history.png)
+
+### 📒 Ledger
+Immutable ledger showing financial events for each payment.
+![Ledger](screenshots/05-ledger.png)
+
+### 📘 API Documentation (Swagger)
+Explore and test secured APIs using Swagger UI.
+![Swagger](screenshots/06-swagger.png)
+
+### 🔔 Stripe Webhooks
+Stripe webhook events received and processed reliably.
+![Stripe Webhooks](screenshots/07-stripe-webhooks.png)
 
 ---
 
