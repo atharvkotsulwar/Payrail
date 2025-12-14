@@ -1,89 +1,53 @@
-💻 PayRail — Frontend (React)
-🚀 Overview
+# PayRail Frontend — React + Vite
 
-This frontend is a React-based UI built to interact with the PayRail backend.
-It demonstrates how a secure frontend integrates with a payment backend using JWT authentication and Stripe test flows.
+This is the frontend UI for **PayRail**, built using **React (Vite)**.
+It demonstrates how a secure frontend integrates with a payments backend using **JWT authentication** and **Stripe test payment flows**.
 
-The UI is intentionally simple and clean to keep focus on functionality and system flow.
+The UI is intentionally simple to keep the focus on system behavior and payment lifecycle.
 
-🛠 Tech Stack
+---
 
-React (Vite)
+## Tech Stack
+- React (Vite)
+- JavaScript
+- CSS
+- Fetch API
 
-JavaScript
+---
 
-CSS
+## Features
 
-Fetch API
+### Authentication
+- Login screen with JWT-based authentication
+- JWT stored in `localStorage`
+- Authenticated API calls using `Authorization: Bearer <token>`
 
-📌 Features
-🔐 Authentication
+### New Payment
+- Create payments using Stripe **test cards**
+- Dropdown to simulate success and failure scenarios
+- Displays immediate payment response from backend
 
-Login screen
+### Payment History
+- Lists all payments created by the user
+- Latest payments displayed first
 
-JWT stored in browser storage
+### Ledger View
+- Displays ledger entries for all payment events
+- Color-coded entries for **success** and **failure**
 
-Authenticated API calls using Bearer token
+---
 
-💳 New Payment
+## Screens Implemented
+- Login Page
+- Dashboard
+- New Payment Page
+- Payment History Page
+- Ledger Page
 
-Card payment simulation using Stripe test tokens
+---
 
-Dropdown to select success/failure scenarios
+## Running Locally
 
-Real-time payment response handling
-
-📜 Payment History
-
-Displays all payments made by the user
-
-Latest payments appear first
-
-📘 Ledger View
-
-Displays ledger entries for all payment events
-
-Color-coded entries for clarity (success / failed)
-
-🖥 Screens Implemented
-
-Login Page
-
-Dashboard
-
-New Payment Page
-
-Payment History Page
-
-Ledger Page
-
-▶️ Running Locally
-Install Dependencies
+### Install Dependencies
+```bash
 npm install
-
-Start Development Server
-npm run dev
-
-🔧 Environment Configuration
-
-Create .env file:
-
-VITE_API_BASE_URL=http://localhost:8080
-
-🔑 Demo Credentials
-username: admin
-password: password123
-
-🔄 API Integration Flow
-
-User logs in → receives JWT
-
-JWT attached to Authorization header
-
-Payment initiated from UI
-
-Backend processes Stripe charge
-
-Webhook confirms final payment state
-
-UI reflects updated history and ledger
