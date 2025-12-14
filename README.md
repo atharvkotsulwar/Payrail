@@ -97,6 +97,8 @@ npm run dev
 ![New Payment](screenshots/03-new-payment.png)
 ![Payment History](screenshots/04-payment-history.png)
 ![Ledger](screenshots/05-ledger.png)
+![swagger](screenshots/06-swagger.png)
+![stripe webhooks](screenshots/07-stripe-webhooks.png)
 
 
 ---
