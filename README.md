@@ -18,6 +18,7 @@ It demonstrates real-world payment workflows such as webhook-driven state transi
 
 ## ✨ Key Features
 - JWT-based authentication
+- Stateless REST APIs with JWT-based authorization
 - Stripe PaymentIntent creation & confirmation
 - Stripe Webhooks for asynchronous payment status updates
 - Webhook signature verification (`STRIPE_WEBHOOK_SECRET`)
@@ -31,50 +32,46 @@ It demonstrates real-world payment workflows such as webhook-driven state transi
 ---
 
 ## 📁 Project Structure
+```txt
 Payrail/
-├── payrail-backend/ # Spring Boot API (JWT + Stripe + Webhooks + MySQL)
-└── payrail-frontend/ # React + Vite dashboard
+├── payrail-backend/    # Spring Boot API (JWT + Stripe + Webhooks + MySQL)
+└── payrail-frontend/   # React + Vite dashboard
+```
 
 ---
 
 ## 🔐 Demo Credentials
-For demo/testing via the UI:
-
 - **Username:** `admin`
 - **Password:** `password123`
 
 ---
 
 ## ▶️ Quick Demo Flow
-1. Open the frontend dashboard  
-   https://payrail-indol.vercel.app/dashboard
-2. Login using demo credentials
-3. Create a new payment (amount + currency)
+1. Open https://payrail-indol.vercel.app/dashboard  
+2. Login with demo credentials  
+3. Create a new payment  
 4. Use Stripe test cards:
-   - `4242 4242 4242 4242` → successful payment
-   - `4000 0000 0000 0002` → failed payment
-5. Verify:
-   - Payment appears in **Payment History** (latest first)
-   - Ledger updates after webhook events
+   - `4242 4242 4242 4242` → success
+   - `4000 0000 0000 0002` → failure
+5. Verify payment history & ledger updates
 
 ---
 
 ## 🔔 Stripe Webhook Setup (Test Mode)
 
-In **Stripe Dashboard → Developers → Webhooks**, add a new endpoint.
-
-### Endpoint URL
+**Endpoint URL**
+```txt
 https://payrail-qefg.onrender.com/api/webhooks/stripe
+```
 
-
-### Events to listen to
+**Events**
 - `payment_intent.succeeded`
 - `payment_intent.payment_failed`
 
-After creating the webhook, copy the **Signing Secret** and configure it in backend environment variables:
-
+**Webhook Secret**
+```txt
 STRIPE_WEBHOOK_SECRET=whsec_XXXXXXXX
-
+```
 
 ---
 
@@ -83,21 +80,17 @@ STRIPE_WEBHOOK_SECRET=whsec_XXXXXXXX
 ### Backend
 ```bash
 cd payrail-backend
-# configure environment variables (see .env.example)
 mvn spring-boot:run
+```
 
 ### Frontend
-
+```bash
 cd payrail-frontend
 npm install
 npm run dev
+```
 
-🔧 Environment Variables
+---
 
-Example environment files are provided:
-
-payrail-backend/.env.example
-
-payrail-frontend/.env.example
-
-
+## 🧠 Resume One-Liner
+PayRail — Built a payments and ledger microservice using **Spring Boot, Stripe Webhooks, JWT, and MySQL**, implementing idempotent webhook handling and deployed end-to-end on **Render + Vercel**.
