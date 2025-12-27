@@ -9,7 +9,7 @@ It demonstrates real-world payment workflows such as webhook-driven state transi
 ---
 
 ## 🔗 Live Links
-- **Frontend (Vercel):** https://payrail-indol.vercel.app/dashboard  
+- **Frontend (Vercel):** https://payrail-indol.vercel.app/login 
 - **Backend (Render):** https://payrail-qefg.onrender.com  
 - **Swagger UI:** https://payrail-qefg.onrender.com/swagger-ui/index.html  
 - **GitHub Repo:** https://github.com/atharvkotsulwar/Payrail  
